@@ -4,6 +4,6 @@
 
 int main()
 {
-	char *tty = ttyname(0);
+	char *tty = ttyname(1);
 	printf("%shh",tty);
 }
