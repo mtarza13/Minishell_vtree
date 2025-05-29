@@ -1,27 +1,32 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <readline/readline.h>
-#include <readline/history.h>
-#include <stdlib.h>
-#include <strings.h>
+#include "token.h"
+/*
+==============================================================================
+ token.c - Token linked list management functions
+==============================================================================
 
+ Description:
+ This file implements the creation, insertion, printing, and freeing of
+ Token structures used in lexical analysis for minishell.
 
-typedef enum{
-	token_word ,
-	token_string,
-	token_pip,
-	token_redir_in,
-	token_redir_out,
-	token_append,
-	token_herdoc
-}tokentype;
+ Functions:
+ - Token *creat_token(char *value, tokentype type)
+   Allocates and initializes a new Token with the given value and type.
 
+ - void add_token(Token **head, Token *new_token)
+   Appends a new token to the end of the token linked list.
 
-typedef struct s_token{
-	char *value;
-	tokentype type;
-	struct s_token *next;
-}Token;
+ - void print_token(Token *head)
+   Prints all tokens in the list with their types and values.
+
+ - void free_token(Token *head)
+   Frees all memory associated with the token linked list.
+
+ Notes:
+ - strdup is used to duplicate token strings for safe storage.
+ - The linked list allows sequential token traversal for parsing.
+
+==============================================================================
+*/
 
 Token *creat_token(char *value , tokentype type)
 {
@@ -38,17 +43,17 @@ void add_token(Token **head,Token *new_token)
 		*head = new_token;
 	else{
 	Token *tmp = *head;	
-	while(tmp)
+	while(tmp->next)
 		tmp = tmp->next;
-	tmp = new_token;
+	tmp->next = new_token;
 		}
 		
 }
 void print_token(Token *head)
-{
+{ 
 	while(head)
 	{
-		printf("[Token :%d => %s\n]", head->type, head->value);
+		printf("[Token :%d => %s]\n", head->type, head->value);
 		head = head->next;
 	}
 
