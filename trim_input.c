@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "test.h"
 
 /**
  * ft_isspace - check if charcter are space belongs
  * @c: charcter to check.
  * Return: 1 if is space otherwise 0.
  */
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == ' ' )
 	       return (1);
@@ -19,7 +20,7 @@ int	ft_isspace(char c)
  * @str: The string.
  * Return: length
  */
-size_t	ft_strlen(const char *str)
+static size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -51,7 +52,7 @@ char	*trim_input(char *str)
 	while (end > start && ft_isspace(str[end - 1]))
 		end--;
 	n_str = malloc(end - start + 1);
-	printf("start =%zu\n end = %zu\n n_size= %zu\n", start, end, (end - start));
+	//printf("start =%zu\n end = %zu\n n_size= %zu\n", start, end, (end - start));
 	if (!n_str)
 		return (NULL);
 	while (start < end)
@@ -67,26 +68,26 @@ char	*trim_input(char *str)
 	return (n_str);
 }
 
-#include <readline/readline.h>
-#include <readline/history.h>
-#include <string.h>
-#include <stdio.h>
+// #include <readline/readline.h>
+// #include <readline/history.h>
+// #include <string.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char	*line;
-	char	*n_line;
+// int main(void)
+// {
+// 	char	*line;
+// 	char	*n_line;
 
-	while (1)
-	{
-		line = readline(">>> ");
-		if (strcmp(line, "exit") == 0)
-			break;
-		n_line = trim_input(line);
-		free(line);
-		printf("n_line:|%s|\n", n_line);
-		free(n_line);
-	}
-	free(line);
-	return (0);
-}
+// 	while (1)
+// 	{
+// 		line = readline(">>> ");
+// 		if (strcmp(line, "exit") == 0)
+// 			break;
+// 		n_line = trim_input(line);
+// 		free(line);
+// 		printf("n_line:|%s|\n", n_line);
+// 		free(n_line);
+// 	}
+// 	free(line);
+// 	return (0);
+// }
