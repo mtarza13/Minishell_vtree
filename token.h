@@ -27,7 +27,7 @@ typedef struct s_token{
 	struct s_token *next;
 }Token;
 
-void lexer(char *line);
+Token *lexer(char *line);
 
 
 
