@@ -35,24 +35,22 @@ void print_cmds(t_cmd *cmd)
 
 int main()
 {
-	char *line = readline("-->");
-	
-	// Only call lexer once!
-	Token *tokens = lexer(line);
-	
-	t_cmd *cmds = parse_tokens(tokens);
+//	char *line = readline("-->");
+//	
+//	Token *tokens = lexer(line);
+//	
+//	t_cmd *cmds = parse_tokens(tokens);
+//
+//	t_cmd *tmp = cmds;
+//	while (tmp)
+//	{
+//	    finalize_args(tmp);
+//	    tmp = tmp->next;
+//	}
+	//	print_cmds(cmds);
 
-	t_cmd *tmp = cmds;
-	while (tmp)
-	{
-	    finalize_args(tmp);
-	    tmp = tmp->next;
-	}
-	print_cmds(cmds);
-
-	// Clean up memory
-	free_token(tokens);  // Now free the tokens after use
-	free(line);          // Free the readline buffer
+	//free_token(tokens);  // Now free the tokens after use
+	//free(line);          // Free the readline buffer
 	
 	return 0;
 }
