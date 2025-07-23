@@ -158,8 +158,8 @@ int exec_ast(t_ast_node *node) {
         return -1;
     if (node->type == 0)
 	{
-		if(is_builtin(node->argv[0])) 
-			return exec_builtin(node->argv);
+	//	if(is_builtin(node->argv[0])) 
+		//	return exec_builtin(node->argv);
         return exec_command(node);
 	}
     if (node->type == 1) // AST_PIPE
