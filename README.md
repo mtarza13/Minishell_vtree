@@ -2,6 +2,8 @@
 
 A simple shell implementation in C that mimics the behavior of bash, created as part of the 42 School curriculum.
 
+![Minishell Screenshot](screenshot.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -19,6 +21,13 @@ A simple shell implementation in C that mimics the behavior of bash, created as 
 ## Overview
 
 Minishell is a simplified version of a Unix shell that provides basic command-line functionality. This project demonstrates understanding of process management, file descriptors, signal handling, and parsing in C.
+
+## Screenshots
+
+### Main Interface
+![Minishell Interface](screenshot.png)
+
+*Example of minishell running basic commands*
 
 ## Features
 
@@ -192,7 +201,9 @@ minishell/
 │   └── utils/
 ├── includes/
 │   └── minishell.h
+├── libft/
 ├── Makefile
+├── screenshot.png
 └── README.md
 ```
 
@@ -217,9 +228,15 @@ minishell/
 - Test extensive command sequences
 - Verify proper cleanup on exit
 
+## Demo
+
+![Minishell Demo](screenshot.png)
+
+The screenshot above shows minishell in action, demonstrating various features including command execution, built-in commands, and proper prompt display.
+
 ## Authors
 
-- [Your Name] - [Your GitHub](https://github.com/yourusername)
+- [mtarza13](https://github.com/mtarza13)
 
 ## License
 
