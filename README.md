@@ -24,8 +24,6 @@ Minishell is a simplified version of a Unix shell that provides basic command-li
 
 ## Screenshots
 
-### Main Interface
-![Minishell Interface](screenshot.png)
 
 *Example of minishell running basic commands*
 
@@ -229,8 +227,6 @@ minishell/
 - Verify proper cleanup on exit
 
 ## Demo
-
-![Minishell Demo](screenshot.png)
 
 The screenshot above shows minishell in action, demonstrating various features including command execution, built-in commands, and proper prompt display.
 
