@@ -233,6 +233,7 @@ The screenshot above shows minishell in action, demonstrating various features i
 ## Authors
 
 - [mtarza13](https://github.com/mtarza13)
+- [yasserbarhdadi](https://github.com/yasserbarhdadi)
 
 ## License
 
